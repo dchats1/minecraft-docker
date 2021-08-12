@@ -1,6 +1,6 @@
 FROM openjdk:16
 
-ADD https://launcher.mojang.com/v1/objects/0a269b5f2c5b93b1712d0f5dc43b6182b9ab254e/server.jar /bin/minecraft-server.jar
+ADD https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar /bin/minecraft-server.jar
 COPY entrypoint.sh /bin/entrypoint.sh
 COPY eula.txt /opt/minecraft/eula.txt
 
