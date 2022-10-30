@@ -1,0 +1,13 @@
+FROM openjdk:17
+
+RUN mkdir /minecraft
+ADD https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar /bin/minecraft-server.jar
+COPY entrypoint.sh /bin/entrypoint.sh
+COPY eula.txt /minecraft/eula.txt
+
+VOLUME ["/minecraft"]
+WORKDIR /minecraft/
+
+EXPOSE 25565/tcp
+
+ENTRYPOINT [ "/bin/entrypoint.sh" ]
