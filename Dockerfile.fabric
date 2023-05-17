@@ -2,8 +2,8 @@ FROM openjdk:17
 
 RUN mkdir /minecraft \
     && cd /minecraft \
-    && curl -o installer.jar https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.11.1/fabric-installer-0.11.1.jar \
-    && java -jar installer.jar server -mcversion 1.19.2 -downloadMinecraft \
+    && curl -o installer.jar https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.11.2/fabric-installer-0.11.2.jar \
+    && java -jar installer.jar server -mcversion 1.19.4 -downloadMinecraft \
     && rm installer.jar \
     && mv server.jar vanilla.jar \
     && mv fabric-server-launch.jar server.jar \
